@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @State private var animateViewsIn = false
     @State private var audioPlayer: AVAudioPlayer!
+    @State private var scalePlayButton = false
     
     var body: some View {
         GeometryReader { geo in
@@ -45,6 +46,36 @@ struct ContentView: View {
                             }
                             .padding(.top,80)
                             .transition(.move(edge: .top))
+                        }
+                    }
+                    .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
+                    
+                    Spacer()
+                        .frame(height: 400)
+//                    Spacer()
+//                    Spacer()
+                    
+                    VStack {
+                        if animateViewsIn {
+                            Button {
+                                //Play Game
+                            } label: {
+                                Text("Play")
+                                    .font(.largeTitle)
+                                    .foregroundStyle(.white)
+                                    .padding(.vertical, 7)
+                                    .padding(.horizontal, 50)
+                                    .background(.brown.mix(with: .black, by: 0.3))
+                                    .clipShape(.rect(cornerRadius: 20))
+                                    .shadow(radius: 5)
+                                    .scaleEffect(scalePlayButton ? 1.2 : 1)
+                                    .onAppear{
+                                        withAnimation(.easeInOut(duration: 1.3).repeatForever()) {
+                                            scalePlayButton.toggle()
+                                        }
+                                    }
+                            }
+                            .transition(.offset(y: geo.size.height/3))
                         }
                     }
                     .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
