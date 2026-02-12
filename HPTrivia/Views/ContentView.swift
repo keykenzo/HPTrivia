@@ -49,6 +49,8 @@ struct ContentView: View {
                             }
                             .padding(.top,80)
                             .transition(.move(edge: .top))
+                            .foregroundStyle(.white)
+                            .blendMode(.difference)
                         }
                     }
                     .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
