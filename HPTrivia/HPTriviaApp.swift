@@ -25,7 +25,7 @@ struct HPTriviaApp: App {
  
  ✓ Game intro screen ✅
  ✓ Gameplay screen
- ✓ Game logic(questions, scores, etc.)
+ ✓ Game logic(questions, scores, etc.) ✅
  ✓ Celebration Screen
  ✓ Audio ✅
  ✓ Animations ✅
