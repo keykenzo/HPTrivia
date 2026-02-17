@@ -238,7 +238,7 @@ struct Gameplay: View {
                                 .offset(x: movePointsToScore ? geo.size.width/2.3 : 0, y: movePointsToScore ? -geo.size.height/13 : 0)
                                 .opacity(movePointsToScore ? 0 : 1)
                                 .onAppear {
-                                    withAnimation(.easeInOut(duration: animateViewsIn ? 2 : 0).delay(3)) {
+                                    withAnimation(.easeInOut(duration: 1).delay(3)) {
                                         movePointsToScore = true
                                     }
                                 }
@@ -278,15 +278,23 @@ struct Gameplay: View {
                     VStack {
                         if tappedCorrectAnswer {
                             Button("Next Level>") {
-                                animateViewsIn = false
-                                revealHint = false
-                                revealBook = false
-                                tappedCorrectAnswer = false
-                                wrongAnswersTapped = []
-                                game.newQuestion()
                                 
+                                withAnimation(.easeInOut(duration: 0.4)) {
+                                    animateViewsIn     = false
+                                    revealHint         = false
+                                    revealBook         = false
+                                    tappedCorrectAnswer = false
+                                    movePointsToScore  = false
+                                    wrongAnswersTapped = []
+                                }
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                    animateViewsIn = true
+                                    game.newQuestion()
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                                        withAnimation(.easeOut(duration: 0.7)) {
+                                            animateViewsIn = true
+                                        }
+                                    }
                                 }
                                 
                             }
@@ -298,7 +306,7 @@ struct Gameplay: View {
                                 content
                                     .scaleEffect(phase ? 1.2 : 1)
                             } animation: { _ in
-                                    .easeInOut(duration: 2)
+                                    .easeInOut(duration: 1.3)
                             }
                         }
                     }
