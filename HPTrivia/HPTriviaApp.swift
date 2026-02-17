@@ -30,8 +30,9 @@ struct HPTriviaApp: App {
  ✓ Audio ✅
  ✓ Animations ✅
  ✓ Store ⍻
+ ✓ In-app Purchases ⍻
  ✓ Instructions Screen ✅
  ✓ Books ✅
- ✓ Persist Scores
+ ✓ Persist Scores ⍻
  
  */
