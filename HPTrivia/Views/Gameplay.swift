@@ -259,41 +259,32 @@ struct Gameplay: View {
                             .clipShape(.rect(cornerRadius: 25))
                             .scaleEffect(2)
                             .matchedGeometryEffect(id: 1, in: namespace)
+                       }
                         
                         Spacer()
-                                                
-                        VStack {
+                        Spacer()
+                        
+                        
+                    VStack {
+                        if tappedCorrectAnswer {
                             Button("Next Level>") {
-                                
+
                             }
                             .font(.largeTitle)
                             .buttonStyle(.borderedProminent)
                             .tint(.blue.opacity(0.5))
                             .transition(.offset(y: geo.size.height/3))
                         }
-//                        .opacity(0)     // começa invisível
-                        .transition(.offset(y: geo.size.height / 3))
-                        .animation(.easeInOut(duration: 0.8).delay(1.2), value: tappedCorrectAnswer)
                     }
+                    .animation(.easeInOut(duration: 2.7).delay(2.7), value: tappedCorrectAnswer)
+                                                
+
                     
                     Spacer()
                     Spacer()
                     
-//                    VStack {
-//                        if tappedCorrectAnswer {
-//                            Button("Next Level>") {
-//                                
-//                            }
-//                            .font(.largeTitle)
-//                            .buttonStyle(.borderedProminent)
-//                            .tint(.blue.opacity(0.5))
-//                            .transition(.offset(y: geo.size.height/3))
-//                        }
-//                    }
-//                    .animation(.easeInOut(duration: 2.7).delay(2.7), value: tappedCorrectAnswer)
+
                 }
-                Spacer()
-                Spacer()
                 
             }
             .frame(width: geo.size.width, height: geo.size.height)
