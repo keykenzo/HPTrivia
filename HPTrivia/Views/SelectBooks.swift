@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct SelectBooks: View {
     
@@ -54,13 +55,12 @@ struct SelectBooks: View {
                                 }
                             } else {
                                 LockedBook(book: book)
-                                .onTapGesture {
-                                    let product = store.products[book.id-4]
-                                    
-                                    Task {
-                                        await store.purchase(product)
+                                    .onTapGesture {
+                                        let product = store.products[book.id-4]
+                                        Task {
+                                            await store.purchase(product)
+                                        }
                                     }
-                                }
                             }
                         }
                         .padding()

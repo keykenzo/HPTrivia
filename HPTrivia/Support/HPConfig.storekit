@@ -9,7 +9,7 @@
       }
     ]
   },
-  "identifier" : "72AFECCC",
+  "identifier" : "D8DBC886",
   "nonRenewingSubscriptions" : [
 
   ],
@@ -17,7 +17,7 @@
     {
       "displayPrice" : "0.99",
       "familyShareable" : false,
-      "internalID" : "4D61C319",
+      "internalID" : "D18287A8",
       "localizations" : [
         {
           "description" : "Unlock trivia questions for HP4",
@@ -32,7 +32,7 @@
     {
       "displayPrice" : "0.99",
       "familyShareable" : false,
-      "internalID" : "C00B4642",
+      "internalID" : "E1A51C7A",
       "localizations" : [
         {
           "description" : "Unlock trivia questions for HP5",
@@ -47,7 +47,7 @@
     {
       "displayPrice" : "0.99",
       "familyShareable" : false,
-      "internalID" : "83EACF38",
+      "internalID" : "B6E08A62",
       "localizations" : [
         {
           "description" : "Unlock trivia questions for HP6",
@@ -62,7 +62,7 @@
     {
       "displayPrice" : "0.99",
       "familyShareable" : false,
-      "internalID" : "D12C1611",
+      "internalID" : "FEFCA30C",
       "localizations" : [
         {
           "description" : "Unlock trivia questions for HP7",

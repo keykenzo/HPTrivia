@@ -23,7 +23,7 @@ class Store {
     
     func loadProducts() async {
         do {
-            products = try await Product.products(for: ["hp4, hp5, hp6, hp7"])
+            products = try await Product.products(for: ["hp4", "hp5", "hp6", "hp7"])
             products.sort {
                 $0.displayName < $1.displayName
             }
