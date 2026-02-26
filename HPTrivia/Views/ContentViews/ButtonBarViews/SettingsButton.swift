@@ -40,3 +40,4 @@ struct SettingsButton: View {
             .environment(Game())
     }
 }
+    
