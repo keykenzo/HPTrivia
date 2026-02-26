@@ -7,7 +7,7 @@ This is Harry Potter Trivia App, a gaming project that asks your questions and l
 
 ## 📸 Screenshots
 
-### Destaques
+### Highlights
 | Main Screen | How to Play | Gameplay |
 |:---:|:---:|:---:|
 | <img src="HPTrivia/Screenshots/mainscreen.png" width="200"> | <img src="HPTrivia/Screenshots/howtoplay.png" width="200"> | <img src="HPTrivia/Screenshots/nextlevel.png" width="200"> |
